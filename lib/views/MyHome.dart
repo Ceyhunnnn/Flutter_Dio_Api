@@ -21,16 +21,11 @@ class MyHome extends StatelessWidget {
               itemBuilder: (context, index) {
                 var user = userList[index];
                 return Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: Column(
                     children: [ListTile(
-                      shape: RoundedRectangleBorder(
-                          side: BorderSide(
 
-                              color: Colors.brown
-                          ),
-                          borderRadius: BorderRadius.circular(15.0)
-                      ),
+
                       title: Text(user.name),
                       subtitle: Text(user.address.city.toString()),
                       leading: Text(user.id.toString()),
