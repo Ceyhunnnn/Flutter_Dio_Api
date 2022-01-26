@@ -20,10 +20,27 @@ class MyHome extends StatelessWidget {
             return ListView.builder(
               itemBuilder: (context, index) {
                 var user = userList[index];
-                return ListTile(
-                  title: Text(user.name),
-                  subtitle: Text(user.address.city.toString()),
-                  leading: Text(user.id.toString()),
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [ListTile(
+                      shape: RoundedRectangleBorder(
+                          side: BorderSide(
+
+                              color: Colors.brown
+                          ),
+                          borderRadius: BorderRadius.circular(15.0)
+                      ),
+                      title: Text(user.name),
+                      subtitle: Text(user.address.city.toString()),
+                      leading: Text(user.id.toString()),
+                    ),
+
+                    Divider(
+                      color: Colors.black,
+                    )]
+
+                  ),
                 );
               },
               itemCount: userList.length,
